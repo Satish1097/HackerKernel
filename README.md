@@ -1,39 +1,47 @@
-//Steps to run the project
+1.Prerequisites
+Python Installed
+Git Installed
 
-Create a Directory
+//Setup Instructions
+
+2.Create a Directory: 
+
 mkdir My_Directory
 cd My_Directory
 
-//Clone Repository
+3.Clone Repository:
 
 git clone https://github.com/Satish1097/HackerKernel.git
 
-//Virtual invironment
+4.Create and Activate a Virtual Environment:
 
 pip install virtualenv
 python -m venv env
+# For Windows
+env\Scripts\activate
+# For macOS/Linux
+source env/bin/activate
 
-//activate Virtual environment env
-for windows
-env/scripts/activate
 
-//Install Django dependencies
+5.Install Django Dependencies:
+
 cd Library_Management
 pip install django
 pip install pandas openpyxl
 
-
-//Initialization
+6.Initialization
 
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
 
-//Run Application
+7.Run Application
 
 python manage.py runserver
 
+If you encounter any issues, feel free to reach out:
 
-if there is any issue feel free to connet 
 M: +91 -776-201-9670
 Email: 2019kumarsatish2019@gmail.com
+
+
