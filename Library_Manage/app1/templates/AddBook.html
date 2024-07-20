@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block container %}
+<div class="Book">
+<form action="{% url 'AddBook' %}" method="POST">
+    <h1>Add Book</h1>
+{% csrf_token %}
+    {{form}}
+    <input type="submit">
+</form>
+</div>
+{% endblock container %}

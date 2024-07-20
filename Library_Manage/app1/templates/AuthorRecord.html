@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block container %}
+<div class="BookRecord">
+    <h1>All Author Record</h1>
+    <table>
+        <button class="Export"><a href="{% url 'Export_AuthorRecords' %}">Export &#8593</a></button>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Bio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for author in authors %}
+            <tr>
+                <td>{{author.name}}</td>
+                <td>{{author.email}}</td>
+                <td>{{author.bio}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagination">
+        <ul>
+            {% if authors.has_previous %}
+            <li>
+                <a href="?page={{authors.previous_page_number}}" class="prev"><i class='bx bx-chevron-left'></i>Prev</a>
+            </li>
+            {% endif %}
+
+            {% for i in page_range %}
+            <li>
+                <a href="?page={{i}}" class="a">{{i}}</a>
+            </li>
+            {% endfor %}
+
+            {% if authors.has_next %}
+            <li>
+                <a href="?page={{authors.next_page_number}}" class="next">Next<i class='bx bx-chevron-right'></i></a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+{% endblock container %}

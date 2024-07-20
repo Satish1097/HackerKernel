@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block container %}
+<div class="BookRecord">
+    <h1>All Borrow Record</h1>
+    <table>
+        <button class="Export"><a href="{% url 'Export_BorrowRecords' %}">Export &#8593</a></button>
+        <thead>
+            <tr>
+                <th>UserName</th>
+                <th>Book</th>
+                <th>Borrow Date</th>
+                <th>Return Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for borrow in borrow_records %}
+            <tr>
+                <td>{{borrow.user_name}}</td>
+                <td>{{borrow.book.title}}</td>
+                <td>{{borrow.borrow_date}}</td>
+                <td>{{borrow.return_date}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagination">
+        <ul>
+            {% if authors.has_previous %}
+            <li>
+                <a href="?page={{borrow_records.previous_page_number}}" class="prev"><i class='bx bx-chevron-left'></i>Prev</a>
+            </li>
+            {% endif %}
+
+            {% for i in page_range %}
+            <li>
+                <a href="?page={{i}}" class="a">{{i}}</a>
+            </li>
+            {% endfor %}
+
+            {% if authors.has_next %}
+            <li>
+                <a href="?page={{borrow_records.next_page_number}}" class="next">Next<i class='bx bx-chevron-right'></i></a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+{% endblock container %}

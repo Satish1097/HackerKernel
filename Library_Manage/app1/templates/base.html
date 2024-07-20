@@ -1,0 +1,53 @@
+{% block header %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="{%static  'css/style.css' %}">
+</head>
+<body>
+    {% if messages %}
+        {% for message in messages %}
+           {% if message.tags %}<script>alert("{{message}}")</script>{% endif %}
+        {% endfor %}
+    {% endif %}
+    <div class="nav">
+        <div class="logo">
+            <h1>LIBRARY</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{% url 'AddAuthor' %}">Add Author</a></li>
+                <li><a href="{% url 'AddBook' %}">Add Book</a></li>
+                <li><a href="{% url 'AddBorrowRecord' %}">Add Borrow Record</a></li>
+            </ul>
+        </div>
+        <div class="Record">
+            <button onclick="openmenu()">All Record</button>
+            <ul id="rc">
+                <li><a href="{% url 'AuthorRecord' %}">Author</a></li>
+                <li><a href="{% url 'BookRecord' %}">Books</a></li>
+                <li><a href="{% url 'BorrowRecord' %}">BorrowRecord</a></li>
+            </ul>
+        </div>
+    </div>
+    {% endblock header %}
+    {% block container %}{% endblock container %}
+
+    {% block footer %}
+
+    <div class="footer">
+        <h3>@copyright ©2024 Satish Kumar</h3>
+    </div>
+    <script>
+        const openmenu =()=>{
+            x=document.getElementById('rc');
+            x.style.right='0%'
+        }
+    </script>
+</body>
+</html>
+{% endblock footer %}

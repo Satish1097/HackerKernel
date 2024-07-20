@@ -1,0 +1,299 @@
+body {
+    overflow-x: hidden;
+}
+
+.nav {
+    height: 10vh;
+    width: 100%;
+    background-color: darkgrey;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .logo {
+    margin-left: 5%;
+    text-align: center;
+}
+
+.nav .menu {
+    width: 50%;
+    display: flex;
+    text-align: center;
+}
+
+.nav .menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav .menu ul li {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.nav .menu ul li a {
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+    font-weight: bold;
+}
+
+.footer {
+    align-items: bottom;
+    background-color: grey;
+    height: 10vh;
+    text-align: center;
+}
+
+.footer h3 {
+    padding-top: 20px;
+}
+
+
+/*=========================Author Form========================*/
+
+.Author {
+    max-width: 500px;
+    min-height: 60vh;
+    background-color: cadetblue;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Author .form-group {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.Author label {
+    font: bold;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.Author input[type="text"],
+.Author input[type="email"],
+.Author textarea {
+    width: 90%;
+    padding: 12px;
+}
+
+.Author textarea {
+    height: 120px;
+}
+
+.Author input[type='submit'] {
+    padding: 12px;
+    border-radius: 5px;
+}
+
+/*=======================Add Book====================*/
+
+.Book {
+    max-width: 500px;
+    min-height: 60vh;
+    background-color: cadetblue;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Book .form-group {
+    margin-bottom: 20px;
+}
+
+.Book label {
+    font: bold;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.Book input[type="text"],
+.Book input[type='date'] {
+    width: 90%;
+    padding: 12px;
+}
+
+.Book select {
+    width: 95%;
+    padding: 12px;
+}
+
+.Book input[type='submit'] {
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+/*=======================Borrow Record======================*/
+
+.Borrow {
+    max-width: 500px;
+    min-height: 60vh;
+    background-color: darkcyan;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Borrow label {
+    font: bold;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.Borrow input[type='text'],
+.Borrow input[type='date'] {
+    width: 90%;
+    padding: 12px;
+}
+
+.Borrow select {
+    width: 95%;
+    padding: 12px;
+}
+
+.Borrow input[type='submit'] {
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+/*===================Home Page===================*/
+
+.main {
+    height: 70vh;
+    width: 100%;
+    background-color: White;
+    text-align: center;
+}
+
+.main h1 {
+    font-size: 70px;
+}
+
+.main p {
+    font-size: 40px;
+}
+
+.Record ul {
+    height: 25vh;
+    width: 180px;
+    background-color: rgb(167, 167, 205);
+    position: absolute;
+    top: 10vh;
+    right: -100%;
+}
+
+.Record ul li {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.Record ul li a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.Record button {
+    position: relative;
+    margin-top: 15px;
+    right: 50px;
+    height: 40px;
+    width: 120px;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*========================Book Record============================*/
+.BookRecord {
+    margin: 10px 0;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.BookRecord h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+.BookRecord .Export{
+    margin-bottom: 10px;
+    float: right;
+    height: 40px;
+    width: 100px;
+}
+.BookRecord .Export a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.BookRecord table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.BookRecord th,
+.BookRecord td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.BookRecord th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+}
+
+.BookRecord tr:hover {
+    background-color: #f2f2f2;
+}
+
+/*=========================Paginator===============================*/
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.pagination li{
+    margin: 0 5px;
+}
+.pagination a{
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+}
+.pagination a:hover{
+    background-color: #e6e6e6;
+}
+.pagination .prev,
+.pagination .next{
+    align-items: center;
+}
+.pagination .prev i,
+.pagination .next i{
+    font-size: 16px;
+}

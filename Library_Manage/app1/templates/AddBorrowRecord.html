@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block container %}
+<div class="Borrow">
+    <h1>Add Borrow Record</h1>
+<form action="{% url 'AddBorrowRecord' %}" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit">
+</form>
+</div>
+{% endblock container %}
